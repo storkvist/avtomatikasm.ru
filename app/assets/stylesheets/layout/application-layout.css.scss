@@ -1,0 +1,58 @@
+@import 'compass';
+
+body {
+  background-color: #ededed;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #fff;
+  padding: 1em;
+
+  h1 {
+    text-align: center;
+  }
+
+  .logo {
+    color: rgb(20, 49, 146);
+    float: left;
+    width: 50%;
+
+    small {
+      color: rgba(20, 49, 146, 0.5);
+      display: block;
+      font-size: 0.5em;
+    }
+  }
+
+  .tel {
+    margin-left: 50%;
+    margin-top: 1.1em;
+  }
+}
+
+nav {
+  @include filter-gradient(#4a4a4a, #000000, vertical);
+  @include background-image(linear-gradient(top, #4a4a4a 0%,#000000 100%));
+
+  background-color: #4a4a4a;
+  clear: both;
+  padding: 1em;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin-right: 2em;
+    }
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}

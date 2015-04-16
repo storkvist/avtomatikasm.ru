@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>АвтоматикаСпецМонтаж</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header>
+  <a href="/">
+    <h1 class="logo">
+      АвтоматикаСпецМонтаж
+      <small>проектирование, монтаж, обслуживание</small>
+    </h1>
+  </a>
+
+  <h1 class="tel">+7 495 514-99-14</h1>
+</header>
+
+<nav>
+  <ul>
+    <% @cms_site.pages.root.children.published.each do |page| %>
+      <li><%= link_to(page.label, page.full_path) %></li>
+    <% end %>
+  </ul>
+</nav>
+
+<%= yield %>
+
+</body>
+</html>
