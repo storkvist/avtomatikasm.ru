@@ -1,14 +1,19 @@
 @import 'compass';
 
 .make-request {
-  background: #4a4a4a;
-  @include background-image(linear-gradient(top, #f5515f 0%, #d0021b 100%));
+  background-color: #a52d2d;
+  background: #ca3b3b;
+  @include background-image(linear-gradient(top, #ca3b3b 0%, rgba(164, 45, 45, 0.8) 100%));
   @include box-shadow(rgba(0, 0, 0, .25) 0 1px 6px);
   color: #fff;
   display: block;
-  @include filter-gradient(#f5515f, #d0021b, vertical);
+  @include filter-gradient(#ca3b3b, #a52d2d, vertical);
   font-size: 1.2em;
   padding: 1em;
   text-align: center;
   text-decoration: none;
+
+  &:hover {
+    background-color: #050101;
+  }
 }
