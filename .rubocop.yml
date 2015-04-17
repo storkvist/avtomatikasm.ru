@@ -1,0 +1,16 @@
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
+  RunRailsCops: true
+
+Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 100
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact

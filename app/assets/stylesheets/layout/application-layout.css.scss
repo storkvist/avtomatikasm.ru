@@ -1,13 +1,13 @@
 @import 'compass';
 
 body {
-  background-color: #ededed;
+  background: #ededed;
   margin: 0;
   padding: 0;
 }
 
 header {
-  background-color: #fff;
+  background: #fff;
   padding: 1em;
 
   h1 {
@@ -33,10 +33,10 @@ header {
 }
 
 nav {
+  background: #4a4a4a;
   @include filter-gradient(#4a4a4a, #000000, vertical);
   @include background-image(linear-gradient(top, #4a4a4a 0%,#000000 100%));
 
-  background-color: #4a4a4a;
   clear: both;
   padding: 1em;
 
@@ -54,5 +54,42 @@ nav {
   a {
     color: #fff;
     text-decoration: none;
+  }
+}
+
+footer {
+  background: #000;
+  color: #fff;
+  padding: 1em;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  ul {
+    list-style-type: none;
+    line-height: 1.5;
+    margin: 0 60% 0 0;
+    padding: 0;
+    position: relative;
+
+    a {
+      color: #9b9b9b;
+    }
+
+    li {
+      display: inline-block;
+      width: 40%;
+    }
+  }
+
+  .copy {
+    float: right;
+    width: 40%;
+
+    h3 {
+      margin-top: 0.5em;
+    }
   }
 }
