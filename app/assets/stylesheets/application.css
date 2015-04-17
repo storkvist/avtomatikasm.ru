@@ -12,6 +12,9 @@
  *
  *= require normalize.css
  *
+ *= require slick
+ *= require slick-theme
+ *
  *= require_tree .
  *= require_self
  */

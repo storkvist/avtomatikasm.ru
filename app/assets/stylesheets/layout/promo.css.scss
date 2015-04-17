@@ -1,0 +1,34 @@
+.promo-wrapper  {
+  background: #2c2c2c;
+
+  .carousel {
+    margin: 0 auto;
+    max-width: 940px;
+
+    .slick-prev,
+    .slick-next {
+      height: 40px;
+      width: 40px;
+    }
+
+    .slick-prev:before, .slick-next:before {
+      font-size: 40px;
+    }
+
+    .slick-prev {
+      left: -45px;
+    }
+
+    .slick-next {
+      right: -45px;
+    }
+
+    .slick-dots {
+      bottom: -10px;
+
+      button:before {
+        font-size: 10px;
+      }
+    }
+  }
+}
