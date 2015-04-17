@@ -9,15 +9,21 @@ body {
 header {
   background: #fff;
   padding: 1em;
-
-  h1 {
-    text-align: center;
-  }
-
+  
   .logo {
     color: rgb(20, 49, 146);
     float: left;
+    text-decoration: none;
     width: 50%;
+
+    img {
+      float: left;
+      height: 100px;
+    }
+
+    h1 {
+      margin-left: 150px;
+    }
 
     small {
       color: rgba(20, 49, 146, 0.5);
@@ -29,13 +35,14 @@ header {
   .tel {
     margin-left: 50%;
     margin-top: 1.1em;
+    text-align: center;
   }
 }
 
 nav {
   background: #4a4a4a;
   @include filter-gradient(#4a4a4a, #000000, vertical);
-  @include background-image(linear-gradient(top, #4a4a4a 0%,#000000 100%));
+  @include background-image(linear-gradient(top, #4a4a4a 0%, #000000 100%));
 
   clear: both;
   padding: 1em;
@@ -58,6 +65,8 @@ nav {
 }
 
 .wrapper {
+  background: image-url('logo-black-opacity10.svg') no-repeat 95% 130%;
+  background-size: 40%;
   padding: 1em;
 
   .right-column {

@@ -1,0 +1,15 @@
+@import 'compass';
+
+.make-request {
+  background: #4a4a4a;
+  @include background-image(linear-gradient(top, #f5515f 0%, #d0021b 100%));
+  border: 1px solid #979797;
+  @include box-shadow(rgba(0, 0, 0, .5) 0 2px 4px);
+  color: #fff;
+  display: block;
+  @include filter-gradient(#f5515f, #d0021b, vertical);
+  font-size: 1.2em;
+  padding: 1em;
+  text-align: center;
+  text-decoration: none;
+}
