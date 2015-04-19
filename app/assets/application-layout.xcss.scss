@@ -1,9 +1,8 @@
-@import 'compass';
+@import '../../../../../../.rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass';
 
 body {
   background: #ededed;
   color: #474747;
-  font-family: 'Myriad Pro', Arial, sans-serif;
   line-height: 1.22;
   margin: 0;
   padding: 0;
@@ -74,25 +73,38 @@ nav {
 }
 
 .wrapper {
-  background: image-url('logo-black-opacity10.svg') no-repeat 95% 130%;
+  background: image-url('logo-black-opacity10.svg') no-repeat 95% 115%;
   background-size: 40%;
-  padding: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 940px;
+  position: relative;
 
   .right-column {
-    float: right;
-    width: 30%;
+    display: inline;
+    float: left;
+    width: 29.166666666666668%;
+    margin: 1em 1.0416666666666665% 0;
   }
 
   .content {
     background: #fff;
+    display: inline;
     @include box-shadow(rgba(0, 0, 0, .25) 0 1px 6px);
-    margin-right: 35%;
+    float: left;
+    margin: 1em 1.0416666666666665% 0;
     padding: 1em;
+    width: 66.66666666666666%;
+
+    &.full-width {
+      margin-right: 0;
+    }
   }
 }
 
 footer {
   background: #2c2c2c;
+  clear: both;
   color: #fff;
   padding: 1em;
 

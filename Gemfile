@@ -2,10 +2,22 @@ source 'https://rubygems.org'
 
 gem 'cms-fortress'
 gem 'pg'
+gem 'therubyracer', platforms: :ruby
 
 group :development do
+  gem 'airbrussh', require: false
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'capistrano-bundler'
+  gem 'capistrano-passenger'
+  gem 'capistrano-rails'
+  gem 'capistrano-rvm'
   gem 'letter_opener'
+  gem 'pry-rails'
+  gem 'rack-mini-profiler'
   gem 'rubocop'
+  gem 'thin'
+  gem 'quiet_assets'
 end
 
 gem 'compass-rails'
@@ -24,8 +36,6 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'

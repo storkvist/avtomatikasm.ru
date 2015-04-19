@@ -1,0 +1,17 @@
+.group {
+  &::after {
+    clear: both;
+    zoom: 1;
+  }
+
+  &::before, &::after {
+    content: '';
+    display: table;
+  }
+}
+
+.page-wrapper {
+  margin: 0 auto;
+  max-width: 940px;
+  position: relative;
+}

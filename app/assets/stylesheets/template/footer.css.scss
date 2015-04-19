@@ -1,0 +1,45 @@
+footer {
+  background-color: #2c2c2c;
+  color: #fff;
+  padding: 20px 2%;
+
+  .headquarters {
+    border-left: 2px solid #c4c4c4;
+    float: right;
+    padding-left: 20px;
+    padding-right: 103px;
+    width: auto;
+
+    h3 {
+      margin-top: 0;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+.nav-footer {
+  float: left;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  ul {
+    line-height: 1.5;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      color: lighten(#143192, 20%);
+    }
+  }
+}
