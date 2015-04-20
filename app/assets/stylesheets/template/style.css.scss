@@ -1,3 +1,29 @@
+@import 'compass';
+
 body {
+  background: #ededed;
   font-family: 'PT Sans', sans-serif;
+}
+
+.main {
+  display: inline;
+  float: left;
+  margin: 20px 1.0416666666666665%;
+  width: 66.66666666666666%;
+  zoom: 1;
+
+  .text {
+    background: #fff;
+    @include box-shadow(0 1px 6px rgba(0, 0, 0, 0.25));
+    padding: 20px;
+  }
+}
+
+.right-column {
+  display: inline;
+  float: left;
+  margin: 20px 1.0416666666666665%;
+  max-width: 400px;
+  width: 29.166666666666668%;
+  zoom: 1;
 }

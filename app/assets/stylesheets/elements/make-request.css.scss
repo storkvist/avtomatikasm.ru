@@ -9,9 +9,10 @@
   display: block;
   @include filter-gradient(#ca3b3b, #a52d2d, vertical);
   font-size: 1.2em;
-  padding: 1em;
+  padding: 20px 10px;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
 
   &:hover {
     background-color: #050101;

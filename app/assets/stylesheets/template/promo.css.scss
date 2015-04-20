@@ -1,5 +1,8 @@
+@import 'compass';
+
 .promo-wrapper  {
   background: #2c2c2c;
+  @include box-shadow(0 1px 6px rgba(0, 0, 0, 0.25));
 
   .carousel {
     margin: 0 auto;
