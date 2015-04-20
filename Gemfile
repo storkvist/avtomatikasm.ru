@@ -23,6 +23,10 @@ group :development do
   gem 'quiet_assets'
 end
 
+group :test do
+  gem 'simplecov', require: false
+end
+
 gem 'compass-rails'
 gem 'jquery-rails'
 source 'https://rails-assets.org' do
