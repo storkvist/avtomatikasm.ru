@@ -29,7 +29,8 @@ ComfortableMexicanSofa.configure do |config|
   # the upload method and appropriate settings based on Paperclip.  For S3 see:
   # http://rdoc.info/gems/paperclip/2.3.8/Paperclip/Storage/S3, and for
   # filesystem see: http://rdoc.info/gems/paperclip/2.3.8/Paperclip/Storage/Filesystem
-  # If you are using S3 and HTTPS, pass :s3_protocol => '' to have URLs that use the protocol of the page
+  # If you are using S3 and HTTPS, pass :s3_protocol => '' to have URLs that use the protocol
+  # of the page
   #   config.upload_file_options = {:url => '/system/:class/:id/:attachment/:style/:filename'}
 
   # Sofa allows you to setup entire site from files. Database is updated with each
@@ -43,13 +44,16 @@ ComfortableMexicanSofa.configure do |config|
   # Importing fixtures into Database
   # To load fixtures into the database just run this rake task:
   #   local: $ rake comfortable_mexican_sofa:fixtures:import FROM=example.local TO=localhost
-  #   Heroku: $ heroku run rake comfortable_mexican_sofa:fixtures:import FROM=example.local TO=yourapp.herokuapp.com
-  # From indicates folder the fixtures are in and to is the Site hostname you have defined in the database.
+  #   Heroku: $ heroku run rake comfortable_mexican_sofa:fixtures:import FROM=example.local
+  #             TO=yourapp.herokuapp.com
+  # From indicates folder the fixtures are in and to is the Site hostname you have defined
+  # in the database.
 
   # Exporting fixtures into Files
   # If you need to dump database contents into fixture files run:
   #   local: $ rake comfortable_mexican_sofa:fixtures:export FROM=localhost TO=example.local
-  #   Heroku: $ heroku run rake comfortable_mexican_sofa:fixtures:export FROM=yourapp.herokuapp.com TO=example.local
+  #   Heroku: $ heroku run rake comfortable_mexican_sofa:fixtures:export FROM=yourapp.herokuapp.com
+  #             TO=example.local
   # This will create example.local folder and dump all content from example.com Site.
 
   # Content for Layouts, Pages and Snippets has a revision history. You can revert
@@ -85,14 +89,14 @@ ComfortableMexicanSofa.configure do |config|
 
   # Site aliases, if you want to have aliases for your site. Good for harmonizing
   # production env with dev/testing envs.
-  # e.g. config.hostname_aliases = {'host.com' => 'host.inv', 'host_a.com' => ['host.lvh.me', 'host.dev']}
+  # e.g. config.hostname_aliases = {'host.com' => 'host.inv',
+  #                                 'host_a.com' => ['host.lvh.me', 'host.dev']}
   # Default is nil (not used)
   #   config.hostname_aliases = nil
 
   # Reveal partials that can be overwritten in the admin area.
   # Default is false.
   #   config.reveal_cms_partials = false
-
 end
 
 # Uncomment this module and `config.admin_auth` above to use custom admin authentication

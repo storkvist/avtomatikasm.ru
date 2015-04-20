@@ -8,10 +8,12 @@ group :development do
   gem 'airbrussh', require: false
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'brakeman', require: false
   gem 'capistrano-bundler'
   gem 'capistrano-passenger'
   gem 'capistrano-rails'
   gem 'capistrano-rvm'
+  gem 'inch', require: false
   gem 'letter_opener'
   gem 'pry-rails'
   gem 'rack-mini-profiler'
@@ -61,4 +63,3 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
