@@ -1,4 +1,8 @@
-== README
+# © АвтоматикаСпецМонтаж
+
+[![Code Climate](https://codeclimate.com/github/storkvist/avtomatikasm.ru/badges/gpa.svg)](https://codeclimate.com/github/storkvist/avtomatikasm.ru)
+
+[![Test Coverage](https://codeclimate.com/github/storkvist/avtomatikasm.ru/badges/coverage.svg)](https://codeclimate.com/github/storkvist/avtomatikasm.ru)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
