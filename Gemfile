@@ -27,6 +27,10 @@ group :test do
   gem 'simplecov', require: false
 end
 
+group :production do
+
+end
+
 gem 'compass-rails'
 gem 'jquery-rails'
 source 'https://rails-assets.org' do
