@@ -1,1 +1,98 @@
-123
+<%= form_tag do %>
+  <h2>Информация о вас</h2>
+
+  <label>
+    Имя <span class=required>*</span><br>
+    <%= text_field_tag :first_name %>
+  </label>
+
+  <label>
+    Фамилия <span class=required>*</span><br>
+    <%= text_field_tag :last_name %>
+  </label>
+
+  <label>
+    Организация<br>
+    <%= text_field_tag :organization %>
+  </label>
+
+  <label>
+    Электронная почта <span class="required">*</span><br>
+    <%= email_field_tag :email %>
+  </label>
+
+  <label>
+    Город<br>
+    <%= text_field_tag :city %>
+  </label>
+
+  <label>
+    Телефон <span class="required">*</span><br>
+    <%= phone_field_tag :phone %>
+  </label>
+
+  <label class="full-width">
+    Что вас интересует? <span class="required">*</span><br>
+    <label class="checkbox">
+      <%= check_box_tag :topic, 'Пожарная сигнализация' %>
+      Пожарная сигнализация
+    </label>
+
+    <label class="checkbox">
+      <%= check_box_tag :topic, 'Система оповещения и управления эвакуацией (СОУЭ)' %>
+      Система оповещения и управления эвакуацией (СОУЭ)
+    </label>
+
+    <label class="checkbox">
+      <%= check_box_tag :topic, 'Видеонаблюдение' %>
+      Видеонаблюдение
+    </label>
+
+    <label class="checkbox">
+      <%= check_box_tag :topic, 'Система контроля и управления доступом (СКУД)' %>
+      Система контроля и управления доступом (СКУД)
+    </label>
+
+    <label class="checkbox">
+      <%= check_box_tag :topic, 'Охрана периметра' %>
+      Охрана периметра
+    </label>
+
+    <label class="checkbox">
+      <%= check_box_tag :topic, 'Охранная сигнализация' %>
+      Охранная сигнализация
+    </label>
+
+    <label class="checkbox">
+      <%= check_box_tag :topic, 'Огнезащита' %>
+      Огнезащита
+    </label>
+
+    <label class="checkbox">
+      <%= check_box_tag :topic, 'Противодымная вентиляция' %>
+      Противодымная вентиляция
+    </label>
+
+    <label class="checkbox">
+      <%= check_box_tag :topic, 'Домофоны и видеофоны' %>
+      Домофоны и видеофоны
+    </label>
+
+    <label class="checkbox">
+      <%= check_box_tag :topic, 'Системы пожаротушения' %>
+      Системы пожаротушения
+    </label>
+
+    <label class="checkbox">
+      <%= check_box_tag :topic, 'Структурированные кабельные системы (СКС)' %>
+      Структурированные кабельные системы (СКС)
+    </label>
+  </label>
+
+  <label class="full-width">
+    Что-нибудь ещё?<br>
+    <%= text_area_tag :comments %>
+  </label>
+
+  <%= submit_tag 'Отправить сообщение' %>
+<% end %>
