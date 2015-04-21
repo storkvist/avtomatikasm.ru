@@ -1,4 +1,10 @@
-<%= form_tag do %>
+<% if flash[:notice] %>
+  <div class="flash">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<%= form_tag send_email_path do %>
   <h2>Информация о вас</h2>
 
   <label>
@@ -31,68 +37,67 @@
     <%= phone_field_tag :phone %>
   </label>
 
-  <label class="full-width">
+  <div class="label full-width">
     Что вас интересует? <span class="required">*</span><br>
     <label class="checkbox">
-      <%= check_box_tag :topic, 'Пожарная сигнализация' %>
+      <%= check_box_tag 'topics[]', 'Пожарная сигнализация' %>
       Пожарная сигнализация
     </label>
 
     <label class="checkbox">
-      <%= check_box_tag :topic, 'Система оповещения и управления эвакуацией (СОУЭ)' %>
+      <%= check_box_tag 'topics[]', 'Система оповещения и управления эвакуацией (СОУЭ)' %>
       Система оповещения и управления эвакуацией (СОУЭ)
     </label>
 
     <label class="checkbox">
-      <%= check_box_tag :topic, 'Видеонаблюдение' %>
+      <%= check_box_tag 'topics[]', 'Видеонаблюдение' %>
       Видеонаблюдение
     </label>
 
     <label class="checkbox">
-      <%= check_box_tag :topic, 'Система контроля и управления доступом (СКУД)' %>
+      <%= check_box_tag 'topics[]', 'Система контроля и управления доступом (СКУД)' %>
       Система контроля и управления доступом (СКУД)
     </label>
 
     <label class="checkbox">
-      <%= check_box_tag :topic, 'Охрана периметра' %>
+      <%= check_box_tag 'topics[]', 'Охрана периметра' %>
       Охрана периметра
     </label>
 
     <label class="checkbox">
-      <%= check_box_tag :topic, 'Охранная сигнализация' %>
+      <%= check_box_tag 'topics[]', 'Охранная сигнализация' %>
       Охранная сигнализация
     </label>
 
     <label class="checkbox">
-      <%= check_box_tag :topic, 'Огнезащита' %>
+      <%= check_box_tag 'topics[]', 'Огнезащита' %>
       Огнезащита
     </label>
 
     <label class="checkbox">
-      <%= check_box_tag :topic, 'Противодымная вентиляция' %>
+      <%= check_box_tag 'topics[]', 'Противодымная вентиляция' %>
       Противодымная вентиляция
     </label>
 
     <label class="checkbox">
-      <%= check_box_tag :topic, 'Домофоны и видеофоны' %>
+      <%= check_box_tag 'topics[]', 'Домофоны и видеофоны' %>
       Домофоны и видеофоны
     </label>
 
     <label class="checkbox">
-      <%= check_box_tag :topic, 'Системы пожаротушения' %>
+      <%= check_box_tag 'topics[]', 'Системы пожаротушения' %>
       Системы пожаротушения
     </label>
 
     <label class="checkbox">
-      <%= check_box_tag :topic, 'Структурированные кабельные системы (СКС)' %>
+      <%= check_box_tag 'topics[]', 'Структурированные кабельные системы (СКС)' %>
       Структурированные кабельные системы (СКС)
     </label>
-  </label>
+  </div>
 
   <label class="full-width">
     Что-нибудь ещё?<br>
     <%= text_area_tag :comments %>
   </label>
-
   <%= submit_tag 'Отправить сообщение' %>
 <% end %>

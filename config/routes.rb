@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   comfy_route :cms_admin, path: '/cms-admin'
 
+  post 'send_email', to: 'emails#send_email'
+
   # Make sure this routeset is defined last
   comfy_route :cms, path: '/', sitemap: true
 end

@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'cms-fortress'
 gem 'pg'
 gem 'therubyracer', platforms: :ruby
+gem 'unicode'
 
 group :development do
   gem 'airbrussh', require: false
@@ -16,7 +17,6 @@ group :development do
   gem 'capistrano-rvm'
   gem 'inch', require: false
   gem 'letter_opener'
-  gem 'pry-rails'
   gem 'rack-mini-profiler'
   gem 'rubocop'
   gem 'thin'
