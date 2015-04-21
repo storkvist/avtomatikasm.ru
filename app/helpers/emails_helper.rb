@@ -6,7 +6,11 @@ module EmailsHelper
   # @param [Hash] parts Поля, заполненные пользователем на странице «Контакты».
   # @return [String]
   def request_email_text(parts)
-    comment = "<p>Комментарий к запросу: <em>#{parts[:comments]}</em></p>" || ''
+    comment = if parts[:comments]
+                "<p>Комментарий к запросу: <em>#{parts[:comments]}</em></p>"
+              else
+                ''
+              end
 
     "<p>#{line_with_name(parts)}</p>" \
     '<p>Заказчик указал, что его интересуют следующие темы: ' \

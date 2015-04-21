@@ -2,7 +2,7 @@
 class EmailsController < ApplicationController
   # Отправка сообщения через форму на сайте.
   def send_email
-    RequestMailer.request_email(resource_params).deliver_later
+    RequestMailer.send_message(resource_params).deliver_later
 
     redirect_to '/kontakty', notice: 'Ваше сообщение отправлено. Очень скоро мы свяжемся с вами.'
   end

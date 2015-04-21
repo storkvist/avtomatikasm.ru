@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<h1>С сайта получен новый запрос.</h1>
+
+<p>First Name Last Name из компании Organization (City) отправил новый запрос через сайт.</p><p>Заказчик указал, что его интересуют следующие темы: topic1, topic2.</p><p>Комментарий к запросу: <em>Comments.</em></p><p>Телефон для связи — <strong>Phone</strong>, электронная почта — <a href='mailto:Email'>Email</a>.</p>
+
+</body>
+</html>

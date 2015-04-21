@@ -1,10 +1,12 @@
 # Класс для отправки сообщения с сайта.
 class RequestMailer < ApplicationMailer
+  add_template_helper(EmailsHelper)
+
   # Отправка сообщения с сайта.
   #
   # @param [Hash] parts Поля, заполненные пользователем на странице «Контакты».
-  def request_email(parts)
+  def send_message(parts)
     @parts = parts
-    mail(to: 'storkvist@storkvist.net', subject: 'Новое сообщение с сайта!')
+    mail(from: parts[:email], to: ASM_EMAIL, subject: 'Новое сообщение с сайта!')
   end
 end
