@@ -1,3 +1,5 @@
-require 'rubocop/rake_task'
+unless Rails.env.production?
+  require 'rubocop/rake_task'
 
-RuboCop::RakeTask.new
+  RuboCop::RakeTask.new
+end

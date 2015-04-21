@@ -1,3 +1,5 @@
-require 'inch/rake'
+unless Rails.env.production?
+  require 'inch/rake'
 
-Inch::Rake::Suggest.new
+  Inch::Rake::Suggest.new
+end
