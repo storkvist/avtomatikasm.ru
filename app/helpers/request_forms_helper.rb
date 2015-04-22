@@ -6,7 +6,11 @@ module RequestFormsHelper
   # @param [Hash] parts Поля, заполненные пользователем на странице «Контакты».
   # @return [String]
   def request_email_text(parts)
-    comment = parts[:comments] ? "<p>Комментарий к запросу: <em>#{parts[:comments]}</em></p>" : ''
+    comment = if parts[:comments].present?
+                "<p>Комментарий к запросу: <em>#{parts[:comments]}</em></p>"
+              else
+                ''
+              end
 
     "<p>#{line_with_name(parts)}</p>" \
     '<p>Заказчик указал, что его интересуют следующие темы: ' \
@@ -28,8 +32,8 @@ module RequestFormsHelper
     text << parts[:first_name]
     text << parts[:last_name]
 
-    text << "из компании #{parts[:organization]}" if parts[:organization]
-    text << "(#{parts[:city]})" if parts[:city]
+    text << "из компании #{parts[:organization]}" if parts[:organization].present?
+    text << "(#{parts[:city]})" if parts[:city].present?
 
     text << 'отправил новый запрос через сайт.'
 
