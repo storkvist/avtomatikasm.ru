@@ -4,6 +4,7 @@ module RequestFormsHelper
   # который затем вставляется в письмо, отправляемое с сайта.
   #
   # @param [Hash] parts Поля, заполненные пользователем на странице «Контакты».
+  #
   # @return [String]
   def request_email_text(parts)
     comment = if parts[:comments].present?
@@ -25,6 +26,7 @@ module RequestFormsHelper
   # и город.
   #
   # @param [Hash] parts Поля, заполненные пользователем на странице «Контакты».
+  #
   # @return [String]
   def line_with_name(parts)
     text = []

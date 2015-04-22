@@ -1,6 +1,17 @@
+# Форма для отправки сообщения с сайта.
+#
+# @attr [String] first_name Имя.
+# @attr [String] last_name Фамилия.
+# @attr [String] organization Организация.
+# @attr [String] email Электронная почта.
+# @attr [String] city Город.
+# @attr [String] phone Телефон.
+# @attr [Array<String>] topics Список услуг.
+# @attr [String] comments Текст сообщения.
 class RequestForm
   include ActiveModel::Model
 
+  # Список атрибутов, которыми обладает форма.
   ATTRIBUTES = [:first_name, :last_name, :organization, :email, :city, :phone, :topics, :comments]
 
   attr_accessor(*ATTRIBUTES)
@@ -11,6 +22,14 @@ class RequestForm
   validates :phone, presence: true
   validate :topics_should_present
 
+  # Конструктор формы.
+  #
+  # Инициализирует форму начальными значениями. При переданном параметре :validate выполняет
+  # валидацию формы, чтобы она «заполнилась» сообщениями об ошибках.
+  #
+  # @param [Hash] params Начальные данные для формы.
+  #
+  # @return [RequestForm]
   def initialize(params)
     params[:request_form] ||= {}
     params[:request_form][:topics] ||= []
@@ -24,6 +43,9 @@ class RequestForm
     valid? if params[:validate]
   end
 
+  # Отправка сообщения с сайта.
+  #
+  # @return [Boolean] Результат отправки сообщения.
   def submit
     if valid?
       RequestMailer.send_message(parts).deliver_later

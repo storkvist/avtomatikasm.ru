@@ -5,6 +5,8 @@ class RequestMailer < ApplicationMailer
   # Отправка сообщения с сайта.
   #
   # @param [Hash] parts Поля, заполненные пользователем на странице «Контакты».
+  #
+  # @return [void]
   def send_message(parts)
     @parts = parts
     mail(from: parts[:email], to: ASM_EMAIL, subject: 'Новое сообщение с сайта!')
