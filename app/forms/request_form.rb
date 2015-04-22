@@ -3,7 +3,7 @@ class RequestForm
 
   ATTRIBUTES = [:first_name, :last_name, :organization, :email, :city, :phone, :topics, :comments]
 
-  attr_accessor *ATTRIBUTES
+  attr_accessor(*ATTRIBUTES)
 
   validates :first_name, presence: true
   validates :last_name, presence: true
@@ -19,7 +19,7 @@ class RequestForm
       send("#{attribute}=", params[:request_form][attribute])
     end
 
-    params[:request_form][:topics].reject! { |element| element.blank? }
+    params[:request_form][:topics].reject!(&:blank?)
 
     valid? if params[:validate]
   end
@@ -33,7 +33,7 @@ class RequestForm
     end
   end
 
-private
+  private
 
   def parts
     ATTRIBUTES.map { |attribute| { attribute => send(attribute.to_s) } }.reduce(:merge)
