@@ -4,100 +4,18 @@
   </div>
 <% end %>
 
-<%= form_tag send_email_path do %>
+<%= simple_form_for RequestForm.new(params) do |f| %>
   <h2>Информация о вас</h2>
 
-  <label>
-    Имя <span class=required>*</span><br>
-    <%= text_field_tag :first_name %>
-  </label>
+  <%= f.error_notification %>
 
-  <label>
-    Фамилия <span class=required>*</span><br>
-    <%= text_field_tag :last_name %>
-  </label>
-
-  <label>
-    Организация<br>
-    <%= text_field_tag :organization %>
-  </label>
-
-  <label>
-    Электронная почта <span class="required">*</span><br>
-    <%= email_field_tag :email %>
-  </label>
-
-  <label>
-    Город<br>
-    <%= text_field_tag :city %>
-  </label>
-
-  <label>
-    Телефон <span class="required">*</span><br>
-    <%= phone_field_tag :phone %>
-  </label>
-
-  <div class="label full-width">
-    Что вас интересует? <span class="required">*</span><br>
-    <label class="checkbox">
-      <%= check_box_tag 'topics[]', 'Пожарная сигнализация' %>
-      Пожарная сигнализация
-    </label>
-
-    <label class="checkbox">
-      <%= check_box_tag 'topics[]', 'Система оповещения и управления эвакуацией (СОУЭ)' %>
-      Система оповещения и управления эвакуацией (СОУЭ)
-    </label>
-
-    <label class="checkbox">
-      <%= check_box_tag 'topics[]', 'Видеонаблюдение' %>
-      Видеонаблюдение
-    </label>
-
-    <label class="checkbox">
-      <%= check_box_tag 'topics[]', 'Система контроля и управления доступом (СКУД)' %>
-      Система контроля и управления доступом (СКУД)
-    </label>
-
-    <label class="checkbox">
-      <%= check_box_tag 'topics[]', 'Охрана периметра' %>
-      Охрана периметра
-    </label>
-
-    <label class="checkbox">
-      <%= check_box_tag 'topics[]', 'Охранная сигнализация' %>
-      Охранная сигнализация
-    </label>
-
-    <label class="checkbox">
-      <%= check_box_tag 'topics[]', 'Огнезащита' %>
-      Огнезащита
-    </label>
-
-    <label class="checkbox">
-      <%= check_box_tag 'topics[]', 'Противодымная вентиляция' %>
-      Противодымная вентиляция
-    </label>
-
-    <label class="checkbox">
-      <%= check_box_tag 'topics[]', 'Домофоны и видеофоны' %>
-      Домофоны и видеофоны
-    </label>
-
-    <label class="checkbox">
-      <%= check_box_tag 'topics[]', 'Системы пожаротушения' %>
-      Системы пожаротушения
-    </label>
-
-    <label class="checkbox">
-      <%= check_box_tag 'topics[]', 'Структурированные кабельные системы (СКС)' %>
-      Структурированные кабельные системы (СКС)
-    </label>
-  </div>
-
-  <label class="full-width">
-    Что-нибудь ещё?<br>
-    <%= text_area_tag :comments %>
-  </label>
-  <%= submit_tag 'Отправить сообщение' %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :organization %>
+  <%= f.input :email %>
+  <%= f.input :city %>
+  <%= f.input :phone %>
+  <%= f.input :topics, collection: Service.all, as: :check_boxes %>
+  <%= f.input :comments, as: :text, input_html: { rows: 5 } %>
+  <%= f.button :submit %>
 <% end %>

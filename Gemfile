@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'cms-fortress'
 gem 'pg'
 gem 'rails', '4.2.1'
+gem 'simple_form'
 gem 'therubyracer', platforms: :ruby
 gem 'unicode'
 

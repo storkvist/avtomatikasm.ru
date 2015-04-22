@@ -295,6 +295,9 @@ GEM
       sprockets-rails (>= 2.0, < 4.0)
       tilt (~> 1.1)
     sexp_processor (4.5.0)
+    simple_form (3.1.0)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
     simplecov (0.9.2)
       docile (~> 1.1.0)
       multi_json (~> 1.0)
@@ -371,6 +374,7 @@ DEPENDENCIES
   rails-assets-normalize.css!
   rubocop
   sass-rails (~> 5.0)
+  simple_form
   simplecov
   spring
   therubyracer

@@ -1,0 +1,20 @@
+ru:
+  simple_form:
+    required:
+      text: 'обязательно для заполнения'
+    error_notification:
+      request_form: 'При отправке вашего сообщения возникли некоторые ошибки:'
+    labels:
+      request_form:
+        first_name: 'Имя'
+        last_name: 'Фамилия'
+        organization: 'Организация'
+        email: 'Электронная почта'
+        city: 'Город'
+        phone: 'Телефон'
+        topics: 'Что вас интересует?'
+        comments: 'Дополнительная информация'
+  helpers:
+    submit:
+      request_form:
+        create: 'Отправить сообщение'

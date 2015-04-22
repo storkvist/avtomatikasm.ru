@@ -1,35 +1,85 @@
 form {
-  padding: 8px 0px;
+  padding: 8px 0;
 
-  label, div.label {
-    clear: both;
-    display: inline-block;
-    font-size: 0.9em;
-    font-weight: bold;
+  .required abbr {
+    color: #ff0000;
+  }
+}
+
+.new_request_form {
+  .error_notification {
+    color: #f00;
+    font-size: 1.1em;
+    margin: 10px 0;
+  }
+
+  .input {
+    float: left;
     margin-bottom: 20px;
     width: 49%;
-    zoom: 1;
 
-    .required {
-      color: #ff0000;
+    label {
+      display: block;
+      margin-bottom: 5px;
     }
 
     input, textarea {
-      font-size: 1em;
-      font-weight: normal;
-      width: 80%;
+      width: 90%;
     }
 
-    &.checkbox {
-      font-size: 1em;
-      font-weight: normal;
-      margin-bottom: 0;
+    .error {
+      color: #f00;
+      display: block;
+      font-size: 0.9em;
+    }
+
+    &.request_form_topics {
       width: 100%;
 
-      input {
-        margin-right: 5px;
-        width: auto;
+      .checkbox {
+        input {
+          display: inline;
+          margin: 0 7px 5px 0;
+          width: auto;
+        }
+
+        label {
+          font-size: 0.9em;
+        }
       }
+    }
+
+    &.request_form_comments {
+      width: 100%;
     }
   }
 }
+//form {
+//  padding: 8px 0px;
+//
+//  label, div.label {
+//    clear: both;
+//    font-size: 0.9em;
+//    font-weight: bold;
+//    margin-bottom: 20px;
+//    zoom: 1;
+//
+//    input, textarea {
+//      font-size: 1em;
+//      font-weight: normal;
+//      width: 80%;
+//    }
+//
+//    &.checkbox {
+//      font-size: 1em;
+//      font-weight: normal;
+//      margin-bottom: 0;
+//      width: 100%;
+//
+//      input {
+//        margin-right: 5px;
+//        width: auto;
+//      }
+//    }
+//  }
+//}

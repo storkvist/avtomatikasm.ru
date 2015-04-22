@@ -1,6 +1,6 @@
 # Класс для отправки сообщения с сайта.
 class RequestMailer < ApplicationMailer
-  add_template_helper(EmailsHelper)
+  add_template_helper(RequestFormsHelper)
 
   # Отправка сообщения с сайта.
   #
