@@ -27,6 +27,7 @@ end
 
 group :test do
   gem 'codeclimate-test-reporter', require: false
+  gem 'database_cleaner'
   gem 'simplecov', require: false
 end
 
