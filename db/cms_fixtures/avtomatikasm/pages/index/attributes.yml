@@ -1,0 +1,11 @@
+---
+label: "Главная страница"
+layout: main-content__right-column
+parent: 
+target_page: 
+categories: []
+is_published: true
+position: 0
+cached_timeout: 0
+aasm_state: published
+published_date: 2015-03-27

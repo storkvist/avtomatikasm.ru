@@ -20,7 +20,7 @@ class RequestForm
   validates :last_name, presence: true
   validates :email, presence: true, email: true
   validates :phone, presence: true
-  validate :topics_should_present
+  validates :topics, presence: true
 
   # Конструктор формы.
   #
@@ -59,9 +59,5 @@ class RequestForm
 
   def parts
     ATTRIBUTES.map { |attribute| { attribute => send(attribute.to_s) } }.reduce(:merge)
-  end
-
-  def topics_should_present
-    errors.add(:topics, 'должно быть что-то выбрано') if @topics.empty?
   end
 end

@@ -9,7 +9,7 @@ before_script:
   - cp config/database.yml.travis config/database.yml
   - psql -c 'create database travis_ci_test;' -U postgres
 script:
-  - bundle exec rake test
+  - bundle exec rake spec
   - bundle exec brakeman
   - bundle exec cane
   - bundle exec rubocop

@@ -1,0 +1,13 @@
+---
+label: "Контакты"
+layout: main-content__right-column
+parent: index
+target_page: 
+categories:
+- "Нижнее меню"
+- "Главное меню"
+is_published: true
+position: 4
+cached_timeout: 0
+aasm_state: published
+published_date: 2015-04-16
