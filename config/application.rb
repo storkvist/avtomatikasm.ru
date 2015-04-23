@@ -25,5 +25,7 @@ module AvtomatikaSM
     config.active_record.raise_in_transactional_callbacks = true
 
     config.autoload_paths << Rails.root.join('lib', 'validators')
+
+    config.secret_key_base = Rails.application.secrets.secret_key_base || ENV['SECRET_KEY_BASE']
   end
 end
