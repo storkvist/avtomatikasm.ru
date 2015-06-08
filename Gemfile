@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'cms-fortress'
+gem 'mini_magick'
 gem 'pg'
 gem 'rails', '4.2.1'
 gem 'simple_form'
