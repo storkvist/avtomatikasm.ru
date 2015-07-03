@@ -122,7 +122,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1.1)
-    colorize (0.7.5)
+    colorize (0.7.7)
     comfortable_mexican_sofa (1.12.8)
       active_link_to (>= 1.0.0)
       bootstrap-sass (>= 3.2.0)

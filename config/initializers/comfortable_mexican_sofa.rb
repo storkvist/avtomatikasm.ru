@@ -4,6 +4,11 @@ ComfortableMexicanSofa.configure do |config|
   # Title of the admin area
   config.cms_title = 'АвтоматикаСпецМонтаж: Администрирование'
 
+  config.upload_file_options[:styles] = {
+    promo: '940x300>',
+    gallery: '300x250>'
+  }
+
   # Controller that is inherited from CmsAdmin::BaseController
   #   config.base_controller = 'ApplicationController'
 

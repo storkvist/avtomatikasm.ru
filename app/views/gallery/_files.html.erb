@@ -1,0 +1,7 @@
+<div class="gallery">
+  <% identifier.each do |image_id| %>
+    <div class="gallery-item">
+      <%= image_tag @cms_site.files.find(image_id).file.url(:gallery) %>
+    </div>
+  <% end %>
+</div>
