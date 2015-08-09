@@ -19,3 +19,5 @@
 coverage
 public/system
 secrets.yml
+.idea
+*.iml
