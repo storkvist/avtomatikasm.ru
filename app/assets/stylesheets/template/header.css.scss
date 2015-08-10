@@ -44,6 +44,13 @@ header {
     float: left;
     padding-left: 8px;
     padding-right: 10px;
+
+    &.current {
+      a {
+        color: lighten(#163393, 20%);
+        font-weight: bold;
+      }
+    }
   }
 
   a {
