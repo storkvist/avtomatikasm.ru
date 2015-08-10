@@ -1,7 +1,9 @@
 <div class="gallery">
   <% identifier.each do |image_id| %>
     <div class="gallery-item">
-      <%= image_tag @cms_site.files.find(image_id).file.url(:gallery) %>
+      <%= link_to @cms_site.files.find(image_id).file.url, target: :blank do %>
+        <%= image_tag @cms_site.files.find(image_id).file.url(:gallery) %>
+      <% end %>
     </div>
   <% end %>
 </div>
