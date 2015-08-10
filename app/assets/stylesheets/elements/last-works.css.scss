@@ -1,0 +1,21 @@
+@import 'compass';
+
+.last-works {
+  background: #fff;
+  //@include background-image(linear-gradient(top, #ca3b3b 0%, rgba(164, 45, 45, 0.8) 100%));
+  @include box-shadow(rgba(0, 0, 0, .25) 0 1px 6px);
+  display: block;
+
+  h3 {
+    background-color: darken(#163393, 20%);
+    color: #fff;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 20px 10px;
+    text-transform: uppercase;
+  }
+
+  p {
+    padding: 0 10px 10px 10px;
+  }
+}
