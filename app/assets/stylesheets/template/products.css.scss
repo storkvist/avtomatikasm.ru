@@ -1,0 +1,68 @@
+@import 'compass';
+
+.products-wrapper  {
+  background: #fff;
+  @include box-shadow(0 1px 6px rgba(0, 0, 0, 0.25));
+
+  .carousel-services {
+    margin: 0 auto;
+    max-width: 940px;
+
+    .slick-prev,
+    .slick-next {
+      height: 40px;
+      top: 60px;
+      width: 40px;
+    }
+
+    .slick-prev:before, .slick-next:before {
+      color:  lighten(#990000, 10%);
+      font-size: 20px;
+    }
+
+    .slick-prev {
+      left: -45px;
+    }
+
+    .slick-next {
+      right: -45px;
+    }
+
+    .slick-dots {
+      bottom: -10px;
+
+      button:before {
+        font-size: 10px;
+      }
+    }
+
+    div {
+      padding: 10px;
+
+      a {
+        color: #474747;
+        text-decoration: none;
+      }
+      
+      i {
+        color: #990000;
+        float: left;
+        font-size: 60px;
+      }
+
+      h3 {
+        color: lighten(#990000, 10%);
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        margin-top: 5px;
+        margin-left: 75px;
+        text-transform: uppercase;
+      }
+
+      p {
+        margin-left: 75px;
+      }
+    }
+  }
+}
