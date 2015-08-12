@@ -1,0 +1,5 @@
+<% Comfy::Cms::Site.find_by_identifier('avtomatikasm').pages.find_by_slug('proekty').children.each do |page| %>
+  <p>
+    <%= link_to(page.label, page.url) %>
+  </p>
+<% end %>
