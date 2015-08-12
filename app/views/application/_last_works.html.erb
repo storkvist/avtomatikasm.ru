@@ -1,4 +1,4 @@
-<% Comfy::Cms::Site.first.pages.find_by_slug('proekty').children.each do |page| %>
+<% Comfy::Cms::Site.first.pages.find_by_slug('proekty').children.limit(5).each do |page| %>
   <p>
     <%= link_to(page.label, page.url) %>
   </p>
