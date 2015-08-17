@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150327131158) do
+ActiveRecord::Schema.define(version: 20150817091103) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -108,6 +108,7 @@ ActiveRecord::Schema.define(version: 20150327131158) do
     t.integer  "position",                       default: 0, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "file_meta"
   end
 
   add_index "comfy_cms_files", ["site_id", "block_id"], name: "index_comfy_cms_files_on_site_id_and_block_id", using: :btree

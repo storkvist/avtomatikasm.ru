@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //
 //= require slick
+//= require photoswipe
 //
 //= require_tree .

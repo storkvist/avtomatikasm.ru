@@ -6,7 +6,7 @@ ComfortableMexicanSofa.configure do |config|
 
   config.upload_file_options[:styles] = {
     promo: '940x300>',
-    gallery: '300x250>'
+    gallery: '300x250'
   }
 
   # Controller that is inherited from CmsAdmin::BaseController

@@ -14,6 +14,7 @@
  *
  *= require slick
  *= require slick-theme
+ *= require photoswipe
  *
  *= require_tree .
  *= require_self

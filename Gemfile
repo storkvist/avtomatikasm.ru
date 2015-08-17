@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'cms-fortress'
 gem 'mini_magick'
+gem 'paperclip-meta'
 gem 'pg'
 gem 'rails', '4.2.1'
 gem 'simple_form'
@@ -44,6 +45,7 @@ end
 gem 'coffee-rails', '~> 4.1.0'
 gem 'compass-rails'
 gem 'jquery-rails'
+gem 'photoswipe-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 source 'https://rails-assets.org' do
